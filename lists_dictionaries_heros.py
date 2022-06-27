@@ -22,6 +22,10 @@ z = [ {'x': 10, 'y': 20} ]
 #2.) How would you change the hero_name of the first hero from 'Batman' to "Dark Knight"?
 #3.) For the franchise dictionary, how would you change 'Aquaman' to 'Daredevil'?
 #4.) For z, how would you change the value 20 to 30?
+x[1][0] = 15
+heros[0]['hero_name'] = 'Dark Knight'
+franchise['dc'][1] = 'Daredevil'
+z[0]['y'] = 30
 
 #-----------------------------------------------------------------
 #Problem 2
@@ -42,6 +46,10 @@ superheros = [
 #real_name - Bruce Banner, hero_name - The Incredible Hulk 
 #real_name - Diana Prince, hero_name - Wonder Woman
 
+def iterateDictionary(heroes):
+    for hero in heroes:
+        print('real_name - ' + hero['real_name'] + ', hero_name - ' + hero['hero_name'])
+
 #------------------------------------------------------------------
 #Problem 3
 #Create a function that given a list of dictionaries and a key name, 
@@ -53,6 +61,9 @@ superheros = [
 #Bruce Banner
 #Diana Prince
 
+def iterateDictionary2(key_name, heroes):
+    for hero in heroes:
+        print(hero[key_name])
 
 #-----------------------------------------------------------------
 #Problem 4
@@ -62,6 +73,17 @@ movie_collection = {
     'disney': ['Cinderella', 'Encanto', 'Little Mermaid', 'Tangled', 'Beauty & The Beast', 'Lion King', '101 Dalmations'],
     'pixar': ['Toy Story', 'Monsters, Inc.', 'Up', 'Finding Nemo', 'Coco', 'Wall-E', 'The Incredibles', 'Inside Out']
 }
+
+def movie_output(movies):
+    print('DISNEY')
+    for movie in movies['disney']:
+        print(movie)
+
+    print('')
+
+    print('PIXAR')
+    for movie in movies['pixar']:
+        print(movie)
 
 #Expected Outpout
 #7 DISNEY
